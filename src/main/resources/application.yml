@@ -1,10 +1,12 @@
 
 spring:
   kafka:
-    bootstrap-servers: host.docker.internal:29092,host.docker.internal:29093
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
 
 
 minio:
-  url: "http://localhost:9000"
-  accessKey: admin
-  secretKey: password
+  url: ${MINIO_URL}
+  get-bucket: ${MINIO_GET_BUCKET}
+  post-bucket: ${MINIO_POST_BUCKET}
+  accessKey: ${MINIO_ACCESS_KEY}
+  secretKey: ${MINIO_SECRET_KEY}

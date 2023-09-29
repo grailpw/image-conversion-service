@@ -16,5 +16,5 @@ ENV ARTIFACT_NAME=ImageToWebpService-0.0.1-SNAPSHOT.jar
 ENV APP_HOME=/usr/app
 
 WORKDIR $APP_HOME
-COPY --from=build-channel-service $APP_HOME/build/libs/$ARTIFACT_NAME .
+COPY --from=build-image-to-webp-service $APP_HOME/build/libs/$ARTIFACT_NAME .
 ENTRYPOINT exec java -jar ${ARTIFACT_NAME}

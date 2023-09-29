@@ -1,0 +1,12 @@
+
+spring:
+  kafka:
+    bootstrap-servers: "localhost:9092"
+
+
+minio:
+  url: "http://localhost:9000"
+  get-bucket: "image-to-webp"
+  post-bucket: "images"
+  accessKey: "admin"
+  secretKey: "password"
